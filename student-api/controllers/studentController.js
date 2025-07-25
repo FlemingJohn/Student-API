@@ -5,6 +5,7 @@ let students = [
   { id: 4, name: "Akash", age: 22 },
   { id: 5, name: "Alan", age: 22 }
 ];
+let nextId = 6;
 
 // Display Method
 const getAllStudents = (req, res) => {
@@ -20,7 +21,7 @@ const addStudent = (req, res) => {
   }
 
   const newStudent = {
-    id: students.length + 1,
+    id: nextId++,
     name,
     age
   };
